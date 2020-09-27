@@ -1,3 +1,18 @@
+function show_login()
+{
+	frames['main'].location.href = '../login/login.html';
+}
+
+function show_front()
+{
+	frames['main'].location.href = '../front/main.html';
+}
+
+function show_back()
+{
+	frames['main'].location.href = '../back/main.html';
+}
+
 function login(obj)
 {
 	if (obj.username == 'yangjie' && obj.password == '123456')
