@@ -14,8 +14,8 @@
 			<h1>Welcome</h1>
 			
 			<form class="form">
-				<input type="text" placeholder="Username">
-				<input type="password" placeholder="Password">
+				<input id="username" type="text" placeholder="Username">
+				<input id="password" type="password" placeholder="Password">
 				<button type="submit" id="login-button">Login</button>
 			</form>
 		</div>
@@ -36,12 +36,17 @@
 </div>
 
 <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="../../js/login.js" type="text/javascript"></script>
 <script>
 $('#login-button').click(function (event) {
 	event.preventDefault();
-	$('form').fadeOut(500);
-	$('.wrapper').addClass('form-success');
+	//$('form').fadeOut(500);
+	let obj = {};
+	obj.username = $('#username').val();
+	obj.password = $('#password').val();
+	login(obj);
 });
+
 </script>
 
 <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#000000">
